@@ -375,8 +375,8 @@ if __name__ == "__main__":
             batch_path=batch_path,
             reformulation_strategies=[
                 "gdp.bigm",
-                # "gdp.hull",
-                # "gdp.hull_exact",
+                "gdp.hull",
+                "gdp.hull_exact",
                 # "gdp.hull_reduced_y",
                 # "gdp.binary_multiplication",
                 # "gdp.hull_eps_1e-2",
