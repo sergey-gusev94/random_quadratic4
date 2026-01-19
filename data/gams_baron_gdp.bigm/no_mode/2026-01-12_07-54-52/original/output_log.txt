@@ -1,0 +1,125 @@
+Solving original (integer) problem with strategy gdp.bigm...
+--- Job model.gms Start 01/12/26 07:55:23 52.2.0 d8e408be LEX-LEG x86 64bit/Linux
+--- Applying:
+    /package/gams/52.2/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /local/scratch/a/sgusev/repos/random_quadratic4/data/gams_baron_gdp.bigm/no_mode/2026-01-12_07-54-52/original/model.gms
+    Output /local/scratch/a/sgusev/repos/random_quadratic4/data/gams_baron_gdp.bigm/no_mode/2026-01-12_07-54-52/original/output.lst
+    ScrDir /local/scratch/a/sgusev/repos/random_quadratic4/data/gams_baron_gdp.bigm/no_mode/2026-01-12_07-54-52/original/225a/
+    SysDir /package/gams/52.2/
+    CurDir /local/scratch/a/sgusev/repos/random_quadratic4/data/gams_baron_gdp.bigm/no_mode/2026-01-12_07-54-52/original/
+    LogOption 3
+    AppendLog 1
+Licensee: David Bernal / SECQUOIA Research Group         G251008+0003Ac-GEN
+          Purdue University, Davidson School of Chemical EngineeringDCE4838
+          225a/gamslice.dat
+          5a82958a-fbca-4a23
+          node:66820903 mem:995 cores:48 ipport:43755 v:2                  
+          Evaluation license: Not for commercial or production use
+          The time-limited license stops working on : Jun 30, 2027
+System information: 48 physical cores and 995 Gb physical memory detected
+GAMS 52.2.0   Copyright (C) 1987-2025 GAMS Development. All rights reserved
+--- Starting compilation
+--- model.gms(3520) 13 Mb
+--- model.gms(3676) 15 Mb
+--- model.gms(4285) 27 Mb
+--- model.gms(4435) 30 Mb
+--- model.gms(5045) 41 Mb
+--- model.gms(5196) 43 Mb
+--- model.gms(5549) 49 Mb
+--- $echo File /local/scratch/a/sgusev/repos/random_quadratic4/data/gams_baron_gdp.bigm/no_mode/2026-01-12_07-54-52/original/baron.opt
+--- model.gms(5563) 49 Mb
+--- model.gms(8529) 50 Mb
+--- Starting execution: elapsed 0:00:00.961
+--- model.gms(5558) 51 Mb
+--- Generating MINLP model GAMS_MODEL
+--- model.gms(3023) 54 Mb
+--- model.gms(4061) 77 Mb
+--- model.gms(4338) 79 Mb
+--- model.gms(5428) 92 Mb
+--- model.gms(5562) 93 Mb
+--- Reset Solvelink = 2
+---   2,577 rows  337 columns  43,857 non-zeroes
+---   2,706,979 nl-code  40,976 nl-non-zeroes
+---   320 discrete-columns
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [ 2.625E-01, 1.743E+02]
+--- Bound     [min, max] : [ 1.000E+00, 1.000E+00] - Zero values observed as well
+--- Matrix    [min, max] : [ 4.165E-06, 1.738E+02]
+--- model.gms(5562) 65 Mb
+--- Executing BARON (Solvelink=2): elapsed 0:00:01.572
+
+GAMS/BARON       52.2.0 d8e408be Dec 8, 2025           LEG x86 64bit/Linux    
+
+--- Using Option File
+Reading parameter(s) from "/local/scratch/a/sgusev/repos/random_quadratic4/data/gams_baron_gdp.bigm/no_mode/2026-01-12_07-54-52/original/baron.opt"
+>>  MaxThreads 1
+*** Error line 1: Unknown option "MaxThreads"
+>>  EpsR 1e-06
+>>  EpsA 1e-10
+>>  AbsConFeasTol 1e-06
+>>  RelConFeasTol 0
+>>  AbsIntFeasTol 1e-05
+>>  RelIntFeasTol 0
+Finished reading from "/local/scratch/a/sgusev/repos/random_quadratic4/data/gams_baron_gdp.bigm/no_mode/2026-01-12_07-54-52/original/baron.opt"
+===========================================================================
+ BARON version 25.11.17. Built: LNX-int-64 2025-11-17 22:27:04           
+ Running on machine dantzig.ecn.purdue.edu
+
+ BARON is a product of The Optimization Firm.
+ For information on BARON, see https://minlp.com/about-baron
+
+ If you publish work using this software, please cite publications from
+ https://minlp.com/baron-publications, such as: 
+
+ Zhang, Y. and N. V. Sahinidis, Solving continuous and discrete
+ nonlinear programs with BARON, Comput Optim Appl (2024). 
+ https://doi.org/10.1007/s10589-024-00633-0
+===========================================================================
+ This BARON run may utilize the following subsolver(s)
+ For LP/MIP/QP: CLP/CBC, ILOG CPLEX                             
+ For NLP: MINOS, SNOPT, External NLP, IPOPT, FILTERSQP
+===========================================================================
+ Doing local search
+ Solving bounding LP
+ Starting multi-start local search
+ Preprocessing found feasible solution with value -1.40188
+ Done with local search
+===========================================================================
+  Iteration       Time (s)     Mem   Lower bound     Upper bound   Progress
+          1+         65.30   258MB    -1.63546        -1.40188        NA
+          1+        103.49   258MB    -1.63546        -1.40188        NA
+          1+        136.79   258MB    -1.63546        -1.40188        NA
+          1+        180.71   258MB    -1.63546        -1.40188        NA
+          1+        234.84   258MB    -1.63546        -1.40188        NA
+          1+        274.94   258MB    -1.63546        -1.40188        NA
+          1         299.49   258MB    -1.63546        -1.40188        0.00%
+          2         300.04   261MB    -1.63546        -1.40188        0.00%
+
+                    *** Max. allowable time exceeded ***      
+
+ Wall clock time:                   300.89
+ Total CPU time used:               300.04
+
+ Total no. of BaR iterations:       2
+ Best solution found at node:      -1
+ Max. no. of nodes in memory:       2
+ 
+ All done
+===========================================================================
+
+Solution      = -1.40187668899653  best solution found during preprocessing
+Best possible = -1.63546177683079
+Absolute gap  = 0.233585087834266  optca = 1E-9
+Relative gap  = 0.142825158706496  optcr = 1E-6
+
+--- Reading solution for model GAMS_MODEL
+--- Executing after solve: elapsed 0:05:03.163
+--- model.gms(5565) 65 Mb
+--- model.gms(8529) 67 Mb
+--- Putfile results /local/scratch/a/sgusev/repos/random_quadratic4/data/gams_baron_gdp.bigm/no_mode/2026-01-12_07-54-52/original/results.dat
+--- Putfile statresults /local/scratch/a/sgusev/repos/random_quadratic4/data/gams_baron_gdp.bigm/no_mode/2026-01-12_07-54-52/original/resultsstat.dat
+*** Status: Normal completion
+--- Job model.gms Stop 01/12/26 08:00:26 elapsed 0:05:03.168
+Original problem solved. Time taken: 307.5940353870392 seconds
+Original objective value: -1.4018766889965264

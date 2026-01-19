@@ -1,0 +1,261 @@
+Solving original (integer) problem with strategy gdp.hull_exact_conic_sqrt_extra_var...
+--- Job model.gms Start 01/07/26 14:44:15 52.2.0 d8e408be LEX-LEG x86 64bit/Linux
+--- Applying:
+    /package/gams/52.2/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /local/scratch/a/sgusev/repos/random_quadratic4/data/gams_gurobi_gdp.hull_exact_conic_sqrt_extra_var/no_mode/2026-01-07_14-44-07/original/model.gms
+    Output /local/scratch/a/sgusev/repos/random_quadratic4/data/gams_gurobi_gdp.hull_exact_conic_sqrt_extra_var/no_mode/2026-01-07_14-44-07/original/output.lst
+    ScrDir /local/scratch/a/sgusev/repos/random_quadratic4/data/gams_gurobi_gdp.hull_exact_conic_sqrt_extra_var/no_mode/2026-01-07_14-44-07/original/225a/
+    SysDir /package/gams/52.2/
+    CurDir /local/scratch/a/sgusev/repos/random_quadratic4/data/gams_gurobi_gdp.hull_exact_conic_sqrt_extra_var/no_mode/2026-01-07_14-44-07/original/
+    LogOption 3
+    AppendLog 1
+Licensee: David Bernal / SECQUOIA Research Group         G251008+0003Ac-GEN
+          Purdue University, Davidson School of Chemical EngineeringDCE4838
+          225a/gamslice.dat
+          5a82958a-fbca-4a23
+          node:66820903 mem:995 cores:48 ipport:44057 v:2                  
+          Evaluation license: Not for commercial or production use
+          The time-limited license stops working on : Jun 30, 2027
+System information: 48 physical cores and 995 Gb physical memory detected
+GAMS 52.2.0   Copyright (C) 1987-2025 GAMS Development. All rights reserved
+--- Starting compilation
+--- model.gms(38575) 12 Mb
+--- model.gms(43335) 13 Mb
+--- $echo File /local/scratch/a/sgusev/repos/random_quadratic4/data/gams_gurobi_gdp.hull_exact_conic_sqrt_extra_var/no_mode/2026-01-07_14-44-07/original/gurobi.opt
+--- model.gms(43348) 13 Mb
+--- model.gms(70235) 19 Mb
+--- Starting execution: elapsed 0:00:00.345
+--- model.gms(43344) 20 Mb
+--- Generating MINLP model GAMS_MODEL
+--- model.gms(43348) 29 Mb
+---   14,409 rows  12,425 columns  105,673 non-zeroes
+---   29,971 nl-code  9,224 nl-non-zeroes
+---   128 discrete-columns
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [ 2.459E-01, 1.000E+00] - Zero values observed as well
+--- Bound     [min, max] : [ 1.000E+00, 1.000E+00] - Zero values observed as well
+--- Matrix    [min, max] : [ 8.111E-06, 1.320E+01] - Zero values observed as well
+--- model.gms(43348) 27 Mb
+--- Executing GUROBI (Solvelink=5): elapsed 0:00:00.425
+Reading parameter(s) from "/local/scratch/a/sgusev/repos/random_quadratic4/data/gams_gurobi_gdp.hull_exact_conic_sqrt_extra_var/no_mode/2026-01-07_14-44-07/original/gurobi.opt"
+>>  NonConvex 2
+>>  Threads 1
+>>  MIPGap 1e-06
+>>  MIPGapAbs 1e-10
+>>  FeasibilityTol 1e-06
+>>  OptimalityTol 1e-06
+>>  IntFeasTol 1e-05
+Finished reading from "/local/scratch/a/sgusev/repos/random_quadratic4/data/gams_gurobi_gdp.hull_exact_conic_sqrt_extra_var/no_mode/2026-01-07_14-44-07/original/gurobi.opt"
+
+... GRB_LICENSE_FILE = /local/scratch/a/sgusev/gurobi.lic
+
+    Gurobi           52.2.0 d8e408be Dec 8, 2025           LEG x86 64bit/Linux    
+
+... GAMS/Gurobi Link license.
+... GMO Q Extraction (ThreePass): 0.00s
+
+    Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Oracle Linux Server 9.7")
+    
+    CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+    Thread count: 48 physical cores, 96 logical processors, using up to 1 threads
+    
+    Non-default parameters:
+    TimeLimit  300
+    MIPGap  1e-06
+    LogToConsole  0
+    NonConvex  2
+    Threads  1
+    
+    Academic license 2640711 - for non-commercial use only - registered to sg___@purdue.edu
+    Optimize a model with 14408 rows, 13448 columns and 97472 nonzeros (Min)
+    Model fingerprint: 0x71a7b67b
+    Model has 8 linear objective coefficients and an objective constant of -2.4588869391410073e-01
+    Model has 36 quadratic objective terms
+    Model has 1024 general nonlinear constraints (10240 nonlinear terms)
+    Variable types: 13320 continuous, 128 integer (0 binary)
+    Coefficient statistics:
+      Matrix range     [8e-06, 1e+01]
+      Objective range  [1e-01, 7e-01]
+      QObjective range [3e-02, 6e+00]
+      Bounds range     [1e+00, 1e+00]
+      RHS range        [1e+00, 1e+00]
+    Presolve removed 1024 rows and 1023 columns
+    Presolve time: 0.86s
+    Presolved: 14408 rows, 21641 columns, 105664 nonzeros
+    Presolved model has 36 quadratic objective terms
+    Presolved model has 9216 quadratic constraint(s)
+    Variable types: 21513 continuous, 128 integer (128 binary)
+    Root relaxation presolve removed 0 rows and 1 columns
+    Root relaxation presolve time: 0.92s
+    Root relaxation presolved: 33791 rows, 40082 columns, 161948 nonzeros
+    Root relaxation presolved model has 9217 second-order cone constraints
+    Root barrier log...
+    
+    Ordering time: 0.04s
+    
+    Barrier statistics:
+     AA' NZ     : 8.518e+05
+     Factor NZ  : 1.199e+06 (roughly 40 MB of memory)
+     Factor Ops : 6.444e+07 (less than 1 second per iteration)
+     Threads    : 1
+    
+                      Objective                Residual
+    Iter       Primal          Dual         Primal    Dual     Compl     Time
+       0  -3.14970449e+01 -7.00186897e+03  1.06e+03 1.06e-01  4.72e+00     1s
+       1  -1.81467180e+01 -6.44068683e+03  3.53e+02 4.27e-03  1.44e+00     1s
+       2  -3.69719558e+00 -4.36254156e+03  4.24e+01 4.69e-09  2.06e-01     1s
+       3  -2.13480368e+00 -1.95038606e+03  1.98e+01 5.17e-10  8.21e-02     1s
+       4  -8.44722261e-01 -4.70420560e+02  4.14e+00 6.75e-11  1.69e-02     1s
+       5  -5.49715698e-01 -7.86097067e+01  7.97e-01 5.79e-12  2.80e-03     1s
+       6  -5.58591746e-01 -1.84867263e+01  3.60e-01 1.73e-13  8.25e-04     1s
+       7  -6.04899103e-01 -1.15483386e+01  2.49e-01 6.24e-14  4.93e-04     1s
+       8  -6.11587816e-01 -8.34480589e+00  1.58e-01 3.30e-14  3.06e-04     1s
+       9  -7.05295268e-01 -4.72895616e+00  7.65e-02 1.15e-14  1.40e-04     1s
+      10  -7.84289017e-01 -2.24448117e+00  2.50e-02 2.98e-15  4.59e-05     2s
+      11  -8.43585319e-01 -1.49077851e+00  6.32e-03 1.39e-15  1.59e-05     2s
+      12  -8.85364835e-01 -1.28023199e+00  4.39e-03 9.44e-16  1.01e-05     2s
+      13  -9.06121265e-01 -1.18447778e+00  3.45e-03 8.17e-16  7.44e-06     2s
+      14  -9.32020748e-01 -1.11787675e+00  2.51e-03 1.08e-15  5.14e-06     2s
+      15  -9.52715072e-01 -1.08394756e+00  1.78e-03 1.46e-15  3.63e-06     2s
+      16  -9.64303280e-01 -1.05061510e+00  1.41e-03 1.13e-15  2.59e-06     2s
+      17  -9.78084284e-01 -1.03373040e+00  9.60e-04 8.80e-16  1.71e-06     2s
+      18  -9.86082430e-01 -1.02570303e+00  6.85e-04 9.44e-16  1.22e-06     2s
+      19  -9.91498424e-01 -1.01707665e+00  4.84e-04 1.21e-15  8.27e-07     2s
+      20  -9.93979498e-01 -1.01242731e+00  3.61e-04 1.12e-15  6.07e-07     2s
+      21  -9.96420481e-01 -1.00910626e+00  2.22e-04 9.88e-16  3.96e-07     2s
+      22  -9.98357925e-01 -1.00417338e+00  1.27e-04 1.19e-15  2.03e-07     2s
+      23  -9.99396145e-01 -1.00187948e+00  6.21e-05 1.33e-15  9.37e-08     2s
+      24  -1.00003719e+00 -1.00063669e+00  1.92e-05 2.82e-15  2.63e-08     2s
+      25  -1.00023404e+00 -1.00036139e+00  2.03e-06 3.60e-15  3.84e-09     2s
+      26  -1.00026514e+00 -1.00034251e+00  9.40e-07 3.77e-15  2.08e-09     2s
+      27  -1.00027146e+00 -1.00031986e+00  6.79e-07 1.04e-14  1.38e-09     2s
+      28  -1.00027364e+00 -1.00031386e+00  5.80e-07 4.57e-15  1.16e-09     2s
+      29  -1.00027449e+00 -1.00031253e+00  6.05e-07 4.73e-15  1.09e-09     3s
+      30  -1.00027512e+00 -1.00031080e+00  5.60e-07 7.10e-15  1.02e-09     3s
+      31  -1.00027822e+00 -1.00030051e+00  4.27e-07 1.67e-14  6.77e-10     3s
+      32  -1.00027897e+00 -1.00029845e+00  4.20e-07 1.79e-14  5.97e-10     3s
+      33  -1.00027975e+00 -1.00029639e+00  3.82e-07 1.51e-14  5.17e-10     3s
+      34  -1.00028009e+00 -1.00029549e+00  3.52e-07 1.14e-14  4.81e-10     3s
+      35  -1.00028027e+00 -1.00029527e+00  3.42e-07 1.04e-14  4.67e-10     3s
+      36  -1.00028057e+00 -1.00029455e+00  3.99e-07 1.60e-14  4.37e-10     3s
+    
+    Barrier solved model in 36 iterations and 3.07 seconds (2.76 work units)
+    Optimal objective -1.00028057e+00
+    
+    
+    Root relaxation: objective -1.000281e+00, 0 iterations, 2.18 seconds (1.99 work units)
+    
+        Nodes    |    Current Node    |     Objective Bounds      |     Work
+     Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+    
+         0     0   -1.00028    0   78          -   -1.00028      -     -    3s
+    H    0     0                      -0.8021109   -1.00028  24.7%     -    3s
+         0     0   -1.00028    0   78   -0.80211   -1.00028  24.7%     -    6s
+         0     2   -1.00028    0   76   -0.80211   -1.00028  24.7%     -    9s
+         1     3   -0.98136    1   72   -0.80211   -1.00028  24.7%   0.0   10s
+        10    12   -0.96026   10   47   -0.80211   -1.00028  24.7%   0.0   15s
+        19    21   -0.95479   19   31   -0.80211   -1.00028  24.7%   0.0   20s
+        36    38   -0.95394   35   10   -0.80211   -1.00028  24.7%   0.0   25s
+    *   41    41              39      -0.9186645   -1.00028  8.88%   0.0   25s
+        48    44   -0.97409    5   70   -0.91866   -0.99079  7.85%   0.0   30s
+    H   54    27                      -0.9560322   -0.99079  3.64%   0.0   35s
+        61    36   -0.96479   17   42   -0.95603   -0.99079  3.64%   0.0   40s
+        71    38   -0.97061    3   71   -0.95603   -0.98945  3.50%   0.0   45s
+        78    45   -0.96922   10   53   -0.95603   -0.98945  3.50%   0.0   50s
+        86    43   -0.97377    4   76   -0.95603   -0.98136  2.65%   0.0   56s
+        91    48   -0.96646    8   59   -0.95603   -0.98136  2.65%   0.0   60s
+       100    57   -0.96418   16   44   -0.95603   -0.98136  2.65%   0.0   65s
+       117    72   -0.95993   29    9   -0.95603   -0.98136  2.65%   0.0   70s
+    *  123    74              34      -0.9599317   -0.98136  2.23%   0.0   70s
+       132    79   -0.96937    8   52   -0.95993   -0.98136  2.23%   0.0   75s
+       141    82   -0.96431   12   44   -0.95993   -0.98136  2.23%   0.0   80s
+       158    93   -0.96206   23   14   -0.95993   -0.98136  2.23%   0.0   85s
+       169    96   -0.96319    8   57   -0.95993   -0.98136  2.23%   0.0   90s
+       179   106   -0.96319   17   38   -0.95993   -0.98136  2.23%   0.0   95s
+       200   121   -0.96067   32    6   -0.95993   -0.98136  2.23%   0.0  100s
+    *  203   103              31      -0.9606691   -0.98136  2.15%   0.0  100s
+       219   117   -0.98136   15    8   -0.96067   -0.98136  2.15%   0.0  105s
+    *  221    23              16      -0.9708464   -0.98136  1.08%   0.0  105s
+    *  228    26              22      -0.9726975   -0.98136  0.89%   0.0  105s
+    *  234     0              14      -0.9813614   -0.98136  0.00%   0.0  106s
+    
+    Explored 235 nodes (0 simplex iterations) in 106.19 seconds (103.50 work units)
+    Thread count was 1 (of 96 available processors)
+    
+    Solution count 8: -0.981361 -0.972697 -0.970846 ... -0.802111
+    
+    Optimal solution found (tolerance 1.00e-06)
+    Best objective -9.813614266851e-01, best bound -9.813614266851e-01, gap 0.0000%
+    
+    User-callback calls 246, time in user-callback 0.00 sec
+
+... Solving fixed model...
+
+    Gurobi Optimizer version 13.0.0 build v13.0.0rc1 (linux64 - "Oracle Linux Server 9.7")
+    
+    CPU model: AMD EPYC 7643 48-Core Processor, instruction set [SSE2|AVX|AVX2]
+    Thread count: 48 physical cores, 96 logical processors, using up to 1 threads
+    
+    Non-default parameters:
+    TimeLimit  300
+    MIPGap  1e-06
+    LogToConsole  0
+    NonConvex  2
+    Threads  1
+    
+    Academic license 2640711 - for non-commercial use only - registered to sg___@purdue.edu
+    Optimize a model with 14408 rows, 13448 columns and 97472 nonzeros (Min)
+    Model fingerprint: 0x76b37b0e
+    Model has 8 linear objective coefficients and an objective constant of -2.4588869391410073e-01
+    Model has 36 quadratic objective terms
+    Coefficient statistics:
+      Matrix range     [8e-06, 1e+01]
+      Objective range  [1e-01, 7e-01]
+      QObjective range [3e-02, 6e+00]
+      Bounds range     [3e-03, 1e+01]
+      RHS range        [1e+00, 1e+00]
+    Presolve removed 14336 rows and 13440 columns
+    Presolve time: 0.01s
+    Presolved: 72 rows, 8 columns, 576 nonzeros
+    Presolved model has 36 quadratic objective terms
+    Ordering time: 0.00s
+    
+    Barrier statistics:
+     Free vars  : 7
+     AA' NZ     : 3.081e+03
+     Factor NZ  : 3.160e+03
+     Factor Ops : 1.675e+05 (less than 1 second per iteration)
+     Threads    : 1
+    
+                      Objective                Residual
+    Iter       Primal          Dual         Primal    Dual     Compl     Time
+       0   4.07779284e+05 -4.27987826e+05  4.57e+03 8.15e+02  1.00e+06     0s
+       1  -1.03365055e+00 -3.68916785e+04  4.57e+00 8.15e-01  1.46e+03     0s
+       2  -9.82017817e-01 -1.14979578e+04  6.52e-03 1.16e-03  1.45e+02     0s
+       3  -9.81362737e-01 -3.55167846e+01  1.30e-05 2.32e-06  4.32e-01     0s
+       4  -9.81361427e-01 -1.01593770e+00  1.30e-11 2.33e-12  4.32e-04     0s
+       5  -9.81361427e-01 -9.81396079e-01  5.89e-10 2.73e-13  4.33e-07     0s
+       6  -9.81361427e-01 -9.81361510e-01  6.65e-09 2.44e-15  4.34e-10     0s
+       7  -9.81361420e-01 -9.81361476e-01  1.20e-08 4.66e-15  4.34e-13     0s
+    
+    Barrier solved model in 7 iterations and 0.01 seconds (0.01 work units)
+    Optimal objective -9.81361420e-01
+    
+    
+    User-callback calls 0, time in user-callback 0.00 sec
+
+--- Reading solution for model GAMS_MODEL
+***
+*** Solver did not provide marginals for model GAMS_MODEL
+***
+--- Executing after solve: elapsed 0:01:46.715
+--- model.gms(43351) 27 Mb
+--- model.gms(70235) 29 Mb
+--- Putfile results /local/scratch/a/sgusev/repos/random_quadratic4/data/gams_gurobi_gdp.hull_exact_conic_sqrt_extra_var/no_mode/2026-01-07_14-44-07/original/results.dat
+--- Putfile statresults /local/scratch/a/sgusev/repos/random_quadratic4/data/gams_gurobi_gdp.hull_exact_conic_sqrt_extra_var/no_mode/2026-01-07_14-44-07/original/resultsstat.dat
+*** Status: Normal completion
+--- model.gms(70235) 28 Mb
+--- Job model.gms Stop 01/07/26 14:46:02 elapsed 0:01:46.750
+Original problem solved. Time taken: 108.26173830032349 seconds
+Original objective value: -0.9813614255661662

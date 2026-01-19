@@ -1,0 +1,132 @@
+Solving original (integer) problem with strategy gdp.hull_exact_conic_sqrt_no_extra_var...
+--- Job model.gms Start 01/14/26 18:50:12 52.2.0 d8e408be LEX-LEG x86 64bit/Linux
+--- Applying:
+    /package/gams/52.2/gmsprmun.txt
+--- GAMS Parameters defined
+    Input /local/scratch/a/sgusev/repos/random_quadratic4/data/gams_scip_gdp.hull_exact_conic_sqrt_no_extra_var/no_mode/2026-01-14_18-49-39/original/model.gms
+    Output /local/scratch/a/sgusev/repos/random_quadratic4/data/gams_scip_gdp.hull_exact_conic_sqrt_no_extra_var/no_mode/2026-01-14_18-49-39/original/output.lst
+    ScrDir /local/scratch/a/sgusev/repos/random_quadratic4/data/gams_scip_gdp.hull_exact_conic_sqrt_no_extra_var/no_mode/2026-01-14_18-49-39/original/225a/
+    SysDir /package/gams/52.2/
+    CurDir /local/scratch/a/sgusev/repos/random_quadratic4/data/gams_scip_gdp.hull_exact_conic_sqrt_no_extra_var/no_mode/2026-01-14_18-49-39/original/
+    LogOption 3
+    AppendLog 1
+Licensee: David Bernal / SECQUOIA Research Group         G251008+0003Ac-GEN
+          Purdue University, Davidson School of Chemical EngineeringDCE4838
+          225a/gamslice.dat
+          5a82958a-fbca-4a23
+          node:66820903 mem:995 cores:48 ipport:60767 v:2                  
+          Evaluation license: Not for commercial or production use
+          The time-limited license stops working on : Jun 30, 2027
+System information: 48 physical cores and 995 Gb physical memory detected
+GAMS 52.2.0   Copyright (C) 1987-2025 GAMS Development. All rights reserved
+--- Starting compilation
+--- model.gms(15845) 9 Mb
+--- model.gms(16412) 11 Mb
+--- model.gms(18700) 17 Mb
+--- model.gms(19258) 18 Mb
+--- model.gms(21524) 24 Mb
+--- model.gms(22106) 26 Mb
+--- model.gms(26675) 28 Mb
+--- $echo File /local/scratch/a/sgusev/repos/random_quadratic4/data/gams_scip_gdp.hull_exact_conic_sqrt_no_extra_var/no_mode/2026-01-14_18-49-39/original/scip.opt
+--- model.gms(40460) 30 Mb
+--- Starting execution: elapsed 0:00:00.917
+--- model.gms(26685) 31 Mb
+--- Generating MINLP model GAMS_MODEL
+--- model.gms(14777) 35 Mb
+--- model.gms(17244) 40 Mb
+--- model.gms(26689) 60 Mb
+---   9,065 rows  4,653 columns  81,549 non-zeroes
+---   819,803 nl-code  35,852 nl-non-zeroes
+---   160 discrete-columns
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [ 5.394E-01, 1.000E+00] - Zero values observed as well
+--- Bound     [min, max] : [ 1.000E+00, 1.000E+00] - Zero values observed as well
+--- Matrix    [min, max] : [ 7.807E-05, 2.601E+01] - Zero values observed as well
+--- model.gms(26689) 44 Mb
+--- Executing SCIP (Solvelink=5): elapsed 0:00:01.166
+
+SCIP             52.2.0 d8e408be Dec 8, 2025           LEG x86 64bit/Linux    
+SCIP version 9.2.4 (a94f778ac8)
+Copyright (c) 2002-2025 Zuse Institute Berlin (ZIB)
+
+External libraries: 
+  CPLEX 22.1.2.0       Linear Programming Solver developed by IBM (www.cplex.com)
+  CppAD 20180000.0     Algorithmic Differentiation of C++ algorithms developed by B. Bell (github.com/coin-or/CppAD)
+  PaPILO 2.4.4         parallel presolve for integer and linear optimization (github.com/scipopt/papilo) (built with TBB) [GitHash: 7c826d50]
+  Nauty 2.8.9          Computing Graph Automorphism Groups by Brendan D. McKay (users.cecs.anu.edu.au/~bdm/nauty)
+  sassy 1.1            Symmetry preprocessor by Markus Anders (github.com/markusa4/sassy)
+  Ipopt 3.14.19        Interior Point Optimizer developed by A. Waechter et.al. (github.com/coin-or/Ipopt)
+
+reading option file /local/scratch/a/sgusev/repos/random_quadratic4/data/gams_scip_gdp.hull_exact_conic_sqrt_no_extra_var/no_mode/2026-01-14_18-49-39/original/scip.opt
+non-default parameter settings:
+limits/time = 300
+limits/gap = 1e-06
+limits/absgap = 1e-10
+lp/threads = 1
+misc/printreason = FALSE
+numerics/dualfeastol = 1e-06
+parallel/maxnthreads = 1
+nlpi/ipopt/linear_solver = "ma27"
+nlpi/ipopt/linear_system_scaling = "mc19"
+
+original problem has 4653 variables (160 bin, 0 int, 4493 cont) and 9065 constraints
+
+all 1 solutions given by solution candidate storage are infeasible
+
+presolving:
+(round 1, fast)       0 del vars, 0 del conss, 0 add conss, 2561 chg bounds, 0 chg sides, 0 chg coeffs, 0 upgd conss, 0 impls, 8 clqs
+(round 2, exhaustive) 0 del vars, 0 del conss, 0 add conss, 2561 chg bounds, 0 chg sides, 0 chg coeffs, 3848 upgd conss, 0 impls, 8 clqs
+   (14.7s) probing cycle finished: starting next cycle
+(round 3, exhaustive) 0 del vars, 0 del conss, 0 add conss, 3007 chg bounds, 0 chg sides, 0 chg coeffs, 3848 upgd conss, 128000 impls, 8 clqs
+   (18.0s) probing: 51/160 (31.9%) - 0 fixings, 0 aggregations, 124160 implications, 446 bound changes
+   (18.0s) probing aborted: 50/50 successive totally useless probings
+   (18.0s) symmetry computation started: requiring (bin +, int +, cont +), (fixed: bin -, int -, cont -)
+   (18.4s) no symmetry present (symcode time: 0.08)
+presolving (4 rounds: 4 fast, 3 medium, 3 exhaustive):
+ 0 deleted vars, 0 deleted constraints, 0 added constraints, 3007 tightened bounds, 0 added holes, 0 changed sides, 0 changed coefficients
+ 128000 implications, 8 cliques
+presolved problem has 4653 variables (160 bin, 0 int, 0 impl, 4493 cont) and 9065 constraints
+   3840 constraints of type <varbound>
+      8 constraints of type <setppc>
+   2656 constraints of type <linear>
+   2561 constraints of type <nonlinear>
+Presolving Time: 18.27
+
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |vars |cons |rows |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl. 
+ 27.9s|     1 |     0 | 26893 |     - |   662M |   0 |  29k|9065 |  49k|   0 |  0 |   0 |   0 |-7.408540e+00 |      --      |    Inf | unknown
+p 135s|     1 |     0 |150297 |     - |  clique|   0 |  29k|9065 |  49k|   0 |  0 |   0 |   0 |-7.408540e+00 |-1.491374e+00 | 396.76%| unknown
+  135s|     1 |     0 |150297 |     - |   671M |   0 |  29k|9065 |  49k|   0 |  0 |   0 |   0 |-7.408540e+00 |-1.491374e+00 | 396.76%| unknown
+  135s|     1 |     0 |150297 |     - |   672M |   0 |  29k|9065 |  49k|   0 |  0 |   0 |   0 |-7.408540e+00 |-1.491374e+00 | 396.76%| unknown
+  141s|     1 |     0 |162576 |     - |   680M |   0 |  29k|9065 |  51k|2000 |  1 |   0 |   0 |-7.408540e+00 |-1.491374e+00 | 396.76%| unknown
+  147s|     1 |     0 |173477 |     - |   682M |   0 |  29k|9065 |  53k|4000 |  2 |   0 |   0 |-7.408540e+00 |-1.491374e+00 | 396.76%| unknown
+  152s|     1 |     0 |184571 |     - |   683M |   0 |  29k|9065 |  55k|6000 |  3 |   0 |   0 |-7.408540e+00 |-1.491374e+00 | 396.76%| unknown
+  157s|     1 |     0 |195300 |     - |   685M |   0 |  29k|9065 |  57k|8000 |  4 |   0 |   0 |-7.408540e+00 |-1.491374e+00 | 396.76%| unknown
+  162s|     1 |     0 |203950 |     - |   686M |   0 |  29k|9065 |  58k|9590 |  5 |   0 |   0 |-7.408540e+00 |-1.491374e+00 | 396.76%| unknown
+  165s|     1 |     0 |210231 |     - |   689M |   0 |  29k|9065 |  60k|  10k|  6 |   0 |   0 |-7.408540e+00 |-1.491374e+00 | 396.76%| unknown
+  167s|     1 |     0 |214542 |     - |   689M |   0 |  29k|9065 |  60k|  11k|  7 |   0 |   0 |-7.408540e+00 |-1.491374e+00 | 396.76%| unknown
+  170s|     1 |     0 |218638 |     - |   691M |   0 |  29k|9065 |  61k|  12k|  8 |   0 |   0 |-7.408540e+00 |-1.491374e+00 | 396.76%| unknown
+  172s|     1 |     0 |222457 |     - |   694M |   0 |  29k|9065 |  62k|  12k|  9 |   0 |   0 |-7.408540e+00 |-1.491374e+00 | 396.76%| unknown
+  174s|     1 |     0 |226146 |     - |   694M |   0 |  29k|9065 |  62k|  13k| 10 |   0 |   0 |-7.408540e+00 |-1.491374e+00 | 396.76%| unknown
+  176s|     1 |     0 |229731 |     - |   696M |   0 |  29k|9065 |  63k|  13k| 11 |   0 |   0 |-7.408540e+00 |-1.491374e+00 | 396.76%| unknown
+
+SCIP Status        : solving was interrupted [time limit reached]
+Solving Time (sec) : 300.03
+Solving Nodes      : 1
+Primal Bound       : -1.49137423819410e+00 (1 solutions)
+Dual Bound         : -7.40853955389971e+00
+Gap                : 396.76 %
+
+
+--- Reading solution for model GAMS_MODEL
+***
+*** Solver did not provide marginals for model GAMS_MODEL
+***
+--- Executing after solve: elapsed 0:05:01.781
+--- model.gms(26692) 44 Mb
+--- model.gms(40460) 46 Mb
+--- Putfile results /local/scratch/a/sgusev/repos/random_quadratic4/data/gams_scip_gdp.hull_exact_conic_sqrt_no_extra_var/no_mode/2026-01-14_18-49-39/original/results.dat
+--- Putfile statresults /local/scratch/a/sgusev/repos/random_quadratic4/data/gams_scip_gdp.hull_exact_conic_sqrt_no_extra_var/no_mode/2026-01-14_18-49-39/original/resultsstat.dat
+*** Status: Normal completion
+--- Job model.gms Stop 01/14/26 18:55:14 elapsed 0:05:01.798
+Original problem solved. Time taken: 303.886146068573 seconds
+Original objective value: -1.4913742281581341
