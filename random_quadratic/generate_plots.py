@@ -1174,25 +1174,51 @@ def create_performance_profile(
         f.write("- Solver_Error: Solver failed with error or other non-optimal status\n")
         f.write("- Missing: Instances not present in data for this strategy\n\n")
 
+        # Calculate dynamic column width based on longest strategy name
+        strategy_col_width = max(
+            len("Strategy"),
+            len("TOTAL"),
+            max((len(data["Strategy"]) for data in results_data), default=0),
+        ) + 1  # Add 1 for spacing
+
+        # Define fixed column widths for numeric columns
+        col_widths = {
+            "Optimal": 10,
+            "Timeout": 10,
+            "Infeasible": 12,
+            "Wrong_Opt": 11,
+            "Solver_Err": 12,
+            "Missing": 10,
+            "Total": 10,
+        }
+        total_width = strategy_col_width + sum(col_widths.values())
+
         # Write table header
         f.write(
-            f"{'Strategy':<20} {'Optimal':<10} {'Timeout':<10} {'Infeasible':<12} "
-            f"{'Wrong_Opt':<11} {'Solver_Err':<12} {'Missing':<10} {'Total':<10}\n"
+            f"{'Strategy':<{strategy_col_width}} {'Optimal':<{col_widths['Optimal']}} "
+            f"{'Timeout':<{col_widths['Timeout']}} {'Infeasible':<{col_widths['Infeasible']}} "
+            f"{'Wrong_Opt':<{col_widths['Wrong_Opt']}} {'Solver_Err':<{col_widths['Solver_Err']}} "
+            f"{'Missing':<{col_widths['Missing']}} {'Total':<{col_widths['Total']}}\n"
         )
-        f.write("-" * 105 + "\n")
+        f.write("-" * total_width + "\n")
 
         # Write data rows
         for data in results_data:
             f.write(
-                f"{data['Strategy']:<20} {data['Optimal']:<10} {data['Timeout']:<10} "
-                f"{data['Infeasible']:<12} {data['Wrong_Optimal']:<11} "
-                f"{data['Solver_Error']:<12} {data['Missing']:<10} {data['Total']:<10}\n"
+                f"{data['Strategy']:<{strategy_col_width}} "
+                f"{data['Optimal']:<{col_widths['Optimal']}} "
+                f"{data['Timeout']:<{col_widths['Timeout']}} "
+                f"{data['Infeasible']:<{col_widths['Infeasible']}} "
+                f"{data['Wrong_Optimal']:<{col_widths['Wrong_Opt']}} "
+                f"{data['Solver_Error']:<{col_widths['Solver_Err']}} "
+                f"{data['Missing']:<{col_widths['Missing']}} "
+                f"{data['Total']:<{col_widths['Total']}}\n"
             )
 
         # Write summary statistics
-        f.write("\n" + "=" * 105 + "\n")
+        f.write("\n" + "=" * total_width + "\n")
         f.write("Summary Statistics:\n")
-        f.write("-" * 105 + "\n")
+        f.write("-" * total_width + "\n")
 
         total_optimal = sum(data["Optimal"] for data in results_data)
         total_timeout = sum(data["Timeout"] for data in results_data)
@@ -1203,9 +1229,14 @@ def create_performance_profile(
         grand_total = sum(data["Total"] for data in results_data)
 
         f.write(
-            f"{'TOTAL':<20} {total_optimal:<10} {total_timeout:<10} "
-            f"{total_infeasible:<12} {total_wrong_optimal:<11} "
-            f"{total_solver_error:<12} {total_missing:<10} {grand_total:<10}\n"
+            f"{'TOTAL':<{strategy_col_width}} "
+            f"{total_optimal:<{col_widths['Optimal']}} "
+            f"{total_timeout:<{col_widths['Timeout']}} "
+            f"{total_infeasible:<{col_widths['Infeasible']}} "
+            f"{total_wrong_optimal:<{col_widths['Wrong_Opt']}} "
+            f"{total_solver_error:<{col_widths['Solver_Err']}} "
+            f"{total_missing:<{col_widths['Missing']}} "
+            f"{grand_total:<{col_widths['Total']}}\n"
         )
 
     print(f"Saved solution outcomes summary to {txt_output}")
